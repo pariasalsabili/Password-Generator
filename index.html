@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Enhanced Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Generate a <br> <span>Random Password</span></h1>
+        <div class="display">
+            <input type="text" id="password" placeholder="Password">
+            <img src="images/icons8-copy-64 (1).png" onclick="copyPassword()">
+        </div>
+        <div class="controls">
+            <label for="length">Length: </label>
+            <input type="range" id="length" min="8" max="20" value="12" oninput="updateLengthDisplay()">
+            <span id="lengthDisplay">12</span>
+            <br>
+            <label><input type="checkbox" id="includeUppercase" checked> Uppercase</label>
+            <label><input type="checkbox" id="includeLowercase" checked> Lowercase</label>
+            <label><input type="checkbox" id="includeNumbers" checked> Numbers</label>
+            <label><input type="checkbox" id="includeSymbols" checked> Symbols</label>
+        </div>
+        <button onclick="createPassword()"><img src="images/icons8-mechanistic-analysis-50.png" alt=""> Generate Password</button>
+        <p id="copyMessage" style="display: none;">Password copied to clipboard!</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
